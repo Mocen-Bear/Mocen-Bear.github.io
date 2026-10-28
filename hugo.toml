@@ -1,0 +1,33 @@
+baseURL = "https://example.org/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
+title = "Mocen_Bear"
+theme = "PaperMod"
+
+mainSections = ["posts"]
+enableEmoji = true
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 5
+
+[params]
+  author = "Mocen_Bear"
+  description = "Mocen_Bear 的博客"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  displayFullLangName = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[minify]
+  disableXML = true
