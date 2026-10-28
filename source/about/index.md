@@ -19,6 +19,6 @@ date: 2026-10-28 18:00:00
 
 ---
 
-<img src="/img/lotso.png" width="280" alt="草莓熊在挥手"/>
+<img src="/img/avatar.jpg" width="240" alt="本站形象大使（本尊出镜）" style="border-radius:12px;"/>
 
-*本站形象大使：草莓熊* 🍓
+*本站形象大使：本尊出镜* 🍓
