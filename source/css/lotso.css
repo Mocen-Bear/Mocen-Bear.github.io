@@ -6,3 +6,14 @@
 }
 #menus .menus_items { order: 1; }
 #menus #search-button { order: 2; }
+
+/* 门面页大标题：前面加一只小草莓熊（仅首页，其他页面标题不受影响） */
+#page-header:has(~ main #home-marker) #site-title::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.1em;
+  background: url(/img/lotso.png) no-repeat center / contain;
+  margin-right: 0.35em;
+  vertical-align: -0.12em;
+}

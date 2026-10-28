@@ -1,12 +1,10 @@
 ---
-title: 首页
+title: Mocen_Bear
 ---
 
-<div align="center"><img src="/img/lotso.png" width="300" alt="草莓熊在挥手"/></div>
+<span id="home-marker" hidden></span>
 
-{% note pink no-icon %}
-**看我眼色行事** 🍓 —— 欢迎来到 Mocen_Bear 的小站！
-{% endnote %}
+<div align="center"><img src="/img/lotso.png" width="300" alt="草莓熊在挥手"/></div>
 
 这里存放我的学习笔记、折腾日记和日常小事，欢迎常来逛逛。
 
