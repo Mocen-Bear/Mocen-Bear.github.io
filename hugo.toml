@@ -1,33 +1,73 @@
 baseURL = "https://example.org/"
-languageCode = "zh-cn"
+locale = "zh-cn"
 defaultContentLanguage = "zh"
 title = "Mocen_Bear"
-theme = "PaperMod"
+theme = "Stack"
 
-mainSections = ["posts"]
 enableEmoji = true
 enableRobotsTXT = true
 
+[params]
+    mainSections = ["posts"]
+    featuredImageField = "image"
+    rssFullContent = true
+    favicon = "img/avatar.svg"
+
+    [params.footer]
+        since = "2026"
+
+    [params.sidebar]
+        avatar = "img/avatar.svg"
+        emoji = "🐻"
+        subtitle = "记录学习、折腾与生活"
+
+    [params.colorScheme]
+        default = "auto"
+        toggle = true
+
+    [params.article]
+        toc = true
+        readingTime = true
+
+    [params.search]
+        enable = true
+        type = "fuse"
+
+[[menu.social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/"
+    [menu.social.params]
+        icon = "brand-github"
+
+[[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+    [menu.main.params]
+        icon = "home"
+
+[[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 2
+    [menu.main.params]
+        icon = "user"
+
+[[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 3
+    [menu.main.params]
+        icon = "archives"
+
 [pagination]
   pagerSize = 5
-
-[params]
-  author = "Mocen_Bear"
-  description = "Mocen_Bear 的博客"
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  displayFullLangName = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
 
 [markup]
   [markup.highlight]
     style = "monokai"
     lineNos = false
-
-[minify]
-  disableXML = true
