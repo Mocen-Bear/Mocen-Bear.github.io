@@ -3,8 +3,10 @@
 
 menu:
   首页: / || fas fa-home
+  关于我: /about/ || fas fa-user
+  博客: /blog/ || fas fa-book-open
   归档: /archives/ || fas fa-archive
-  关于: /about/ || fas fa-user
+  标签: /tags/ || fas fa-tags
 
 # 头像（我的草莓熊）
 avatar:
@@ -78,3 +80,7 @@ aside:
   card_announcement:
     enable: true
     content: 看我眼色行事 🍓
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/lotso.css">

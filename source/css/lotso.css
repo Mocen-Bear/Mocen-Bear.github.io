@@ -1,0 +1,8 @@
+/* Mocen_Bear · 草莓熊小站微调 */
+/* 导航菜单顺序：菜单项在前，内置「搜索」按钮挪到最右 */
+#menus {
+  display: flex;
+  align-items: center;
+}
+#menus .menus_items { order: 1; }
+#menus #search-button { order: 2; }
