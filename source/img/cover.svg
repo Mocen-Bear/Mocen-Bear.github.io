@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="500" viewBox="0 0 800 500">
   <defs>
     <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#d9568e"/>
-      <stop offset="0.5" stop-color="#ef7fae"/>
-      <stop offset="1" stop-color="#f9c7d8"/>
+      <stop offset="0" stop-color="#ff9a9e"/>
+      <stop offset="0.5" stop-color="#fad0c4"/>
+      <stop offset="1" stop-color="#a18cd1"/>
     </linearGradient>
     <g id="cberry">
       <ellipse cx="-9" cy="-15" rx="10" ry="5.5" fill="#5fae6f" transform="rotate(-24 -9 -15)"/>
@@ -17,11 +17,8 @@
     </g>
   </defs>
   <rect width="800" height="500" fill="url(#cg)"/>
-  <circle cx="400" cy="250" r="230" fill="#fdf0e4" opacity="0.25"/>
-  <circle cx="150" cy="110" r="80" fill="#ffffff" opacity="0.12"/>
-  <circle cx="690" cy="430" r="65" fill="#ffffff" opacity="0.12"/>
-  <use xlink:href="#cberry" href="#cberry" transform="translate(390 260) rotate(-10) scale(2.6)"/>
-  <use xlink:href="#cberry" href="#cberry" transform="translate(600 140) rotate(16) scale(1.35)" opacity="0.9"/>
-  <use xlink:href="#cberry" href="#cberry" transform="translate(175 165) rotate(-22) scale(1.15)" opacity="0.9"/>
-  <use xlink:href="#cberry" href="#cberry" transform="translate(640 400) rotate(6) scale(1.0)" opacity="0.85"/>
+  <circle cx="400" cy="250" r="220" fill="#fdf0e4" opacity="0.3"/>
+  <circle cx="140" cy="110" r="75" fill="#ffffff" opacity="0.15"/>
+  <circle cx="700" cy="440" r="60" fill="#ffffff" opacity="0.15"/>
+  <use xlink:href="#cberry" href="#cberry" transform="translate(395 260) rotate(-8) scale(2.4)"/>
 </svg>

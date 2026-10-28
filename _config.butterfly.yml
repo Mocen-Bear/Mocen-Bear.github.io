@@ -23,21 +23,7 @@ favicon: /img/favicon.jpg
 # 首页 banner 高度（固定高比全屏构图更稳）
 index_top_img_height: 550px
 
-# 草莓熊主题色
-theme_color:
-  enable: true
-  main: "#e0619c"
-  paginator: "#c94f7c"
-  button_hover: "#d6558d"
-  text_selection: "#f5b8cf"
-  link_color: "#c94f7c"
-  hr_color: "#f5d3e0"
-  toc_color: "#c94f7c"
-  scrollbar_color: "#e0619c"
-  blockquote_padding_color: "#e0619c"
-  blockquote_background_color: "#e0619c"
-  meta_theme_color_light: "ffffff"
-  meta_theme_color_dark: "0d0d0d"
+# 主题色：保持 Butterfly 默认（蓝）—— 与粉紫蓝渐变 Banner 最搭
 
 # 本地搜索
 search:
