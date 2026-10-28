@@ -1,0 +1,80 @@
+# Butterfly 主题配置（站点覆盖文件）—— Mocen_Bear 草莓熊主题
+# 完整可选项见 themes/butterfly/_config.yml 和 https://butterfly.js.org/
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  关于: /about/ || fas fa-user
+
+# 头像（我的草莓熊）
+avatar:
+  img: /img/avatar.jpg
+  effect: false
+
+# Banner 大图
+index_img: /img/banner.svg
+default_top_img: /img/banner.svg
+archive_img: /img/banner.svg
+
+favicon: /img/favicon.jpg
+
+# 首页 banner 高度（固定高比全屏构图更稳）
+index_top_img_height: 550px
+
+# 草莓熊主题色
+theme_color:
+  enable: true
+  main: "#e0619c"
+  paginator: "#c94f7c"
+  button_hover: "#d6558d"
+  text_selection: "#f5b8cf"
+  link_color: "#c94f7c"
+  hr_color: "#f5d3e0"
+  toc_color: "#c94f7c"
+  scrollbar_color: "#e0619c"
+  blockquote_padding_color: "#e0619c"
+  blockquote_background_color: "#e0619c"
+  meta_theme_color_light: "ffffff"
+  meta_theme_color_dark: "0d0d0d"
+
+# 本地搜索
+search:
+  use: local_search
+  placeholder: 搜搜看…
+  local_search:
+    preload: false
+    top_n_per_article: 2
+
+# 暗色模式
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+# 社交链接（GitHub 用户名定了以后填）
+social:
+  fab fa-github: https://github.com/ || Github || '#24292e'
+
+# 代码块样式
+code_blocks:
+  theme: darker
+  macStyle: true
+  copy: true
+  language: true
+
+# 文章卡片封面
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+    - /img/cover.svg
+
+# 侧栏
+aside:
+  card_author:
+    button:
+      enable: false
+  card_announcement:
+    enable: true
+    content: 看我眼色行事 🍓
