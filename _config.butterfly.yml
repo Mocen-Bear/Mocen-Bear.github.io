@@ -93,3 +93,4 @@ inject:
     - <link rel="stylesheet" href="/css/lotso.css">
   bottom:
     - <script defer src="/js/lotso_scroll.js"></script>
+    - <script defer src="/js/lotso_cut.js"></script>

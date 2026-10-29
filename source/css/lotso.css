@@ -72,3 +72,58 @@
 .fa-cog.fa-spin {
   animation: none !important;
 }
+
+/* ------------------------------------------------------------------
+   剪刀分割线交互（用户点子）：分割线上的 ✂ 默认安静趴在左端。
+   ① 不许 hover 触发（主题默认 hover 就跑，干掉）
+   ② 点击 ✂ → 剪刀 1 秒滑到最右端，虚线从左往右「断口」消失
+   ③ 虚线断开的同时，其下方的评论区平滑展开；再点一次全部复位
+   实现：JS 给 .custom-hr 加 .cut-open 类 + 记住剪没剪过(.cut-clicked)，
+   CSS 用 border-color 透明化伪装断口，评论区用 max-height 展开。
+   ------------------------------------------------------------------ */
+
+/* ① 禁 hover 滑动：主题用 ：hover 改 :before 的 left，改为 none */
+.custom-hr:hover::before {
+  left: 5% !important;
+}
+
+/* ② 剪刀本体：静止在左端 5%，只有 .cut-open 才滑走（1s 老主题节奏） */
+.custom-hr {
+  cursor: pointer;
+  user-select: none;
+}
+.custom-hr::before {
+  transition: left 1s ease-in-out, opacity .4s ease .55s !important;
+}
+#post-comment {
+  max-height: 1400px;
+  overflow: hidden;
+  transition: max-height 1.2s ease-in-out, opacity .8s ease;
+  opacity: 1;
+}
+hr.custom-hr.cut-open::before {
+  left: calc(95% - 20px) !important;
+}
+/* 剪断后：虚线从左往右消失——用 border 渐变伪装（左段透明=断口）*/
+hr.custom-hr.cut-open {
+  border-color: transparent;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 14%,
+    var(--hr-border) 30%,
+    var(--hr-border) 86%,
+    rgba(255, 255, 255, 0) 99%
+  );
+  background-origin: border-box;
+  background-clip: border-box;
+}
+/* 断口出现在剪刀身后 —— 简单可靠:让虚线整体半透+只留右残段 */
+/* ③ 评论区默认收起；cut-open 后展开 */
+#post-comment:not(.cut-open) {
+  max-height: 0;
+  opacity: 0;
+}
+hr.custom-hr.cut-clicked:not(.cut-open)::before {
+  transition: left 1s ease-in-out !important;
+}
