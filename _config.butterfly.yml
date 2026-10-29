@@ -65,7 +65,7 @@ aside:
       enable: false
   card_announcement:
     enable: true
-    content: 看我眼色行事 🍓
+    content: 欢迎来到我的 blog
 
 inject:
   head:
