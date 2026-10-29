@@ -50,13 +50,17 @@ code_blocks:
   copy: true
   language: true
 
-# 文章卡片封面
+# 文章卡片封面（封面池：随机抽取，自带防重复逻辑）
 cover:
   index_enable: true
   aside_enable: true
   archives_enable: true
   default_cover:
-    - /img/cover.svg
+    - /img/cover-1.svg
+    - /img/cover-2.svg
+    - /img/cover-3.svg
+    - /img/cover-4.svg
+    - /img/cover-5.svg
 
 # 侧栏
 aside:

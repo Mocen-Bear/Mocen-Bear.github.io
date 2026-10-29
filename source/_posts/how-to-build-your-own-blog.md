@@ -1,5 +1,5 @@
 ---
-title: 手把手教你搭一个自己的博客（零基础版）
+title: 从零开始搭一个自己的博客
 date: 2025-08-10 18:00:00
 tags:
   - 教程
@@ -66,7 +66,7 @@ deploy:
 
 4. 执行 `hexo clean && hexo deploy`，等几分钟，访问你的网址 —— 「上线了，老板！」
 
-写完博客怎么发文章？那是「日常篇」的话题，看下一篇 → [手把手教你写文章并发布](/posts/how-to-write-and-publish-posts/)
+写完博客怎么发文章？看下一篇 → [如何写文章并在blog里发表](/posts/how-to-write-and-publish-posts/)
 
 ## 踩坑预警（我都替你踩过了）
 
