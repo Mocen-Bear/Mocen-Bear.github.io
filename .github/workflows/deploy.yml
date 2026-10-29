@@ -27,6 +27,10 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm install
+      - name: Setup Pages (auto-enable)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Generate site
         run: npx hexo generate
       - name: Upload artifact
