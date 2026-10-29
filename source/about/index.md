@@ -1,7 +1,10 @@
 ---
 title: 关于
 date: 2026-10-28 18:00:00
+comments: true
 ---
+
+🍓 **Mocen_Bear 向你问好，欢迎来到我的 blog！**
 
 你好，我是 **Mocen_Bear** 🐻
 

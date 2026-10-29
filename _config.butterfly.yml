@@ -77,6 +77,17 @@ CDN:
   option:
     busuanzi: https://cn.vercount.one/js
 
+# 评论：Utterances（用 GitHub Issues 当留言板，留言者用 GitHub 账号登录）
+comments:
+  use: utterances
+  text: true
+  lazyload: true
+utterances:
+  repo: Mocen-Bear/Mocen-Bear.github.io
+  issue_term: pathname
+  light_theme: github-light
+  dark_theme: photon-dark
+
 inject:
   head:
     - <link rel="stylesheet" href="/css/lotso.css">
