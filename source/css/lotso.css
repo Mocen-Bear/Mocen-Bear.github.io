@@ -7,6 +7,30 @@
 #menus .menus_items { order: 1; }
 #menus #search-button { order: 2; }
 
+/* 门面页 Banner：复刻 full_page 全屏效果（仅首页，其他页面不受影响） */
+@media (min-width: 769px) {
+  #page-header:has(~ main #home-marker) {
+    height: 100vh;
+    background-attachment: fixed;
+  }
+  #page-header:has(~ main #home-marker) #page-site-info {
+    top: 43%;
+  }
+}
+
+/* 门面页下拉箭头（JS 注入的 #scroll-down-lotso） */
+#scroll-down-lotso {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+#scroll-down-lotso .scroll-down-effects {
+  display: inline-block;
+  color: var(--light-grey);
+  font-size: 26px;
+}
 /* 门面页大标题：前面加一只小草莓熊大头特写（截新图头部，和 Banner 那只区分开） */
 #page-header:has(~ main #home-marker) #site-title::before {
   content: "";

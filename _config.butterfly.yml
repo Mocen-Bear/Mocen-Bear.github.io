@@ -70,3 +70,5 @@ aside:
 inject:
   head:
     - <link rel="stylesheet" href="/css/lotso.css">
+  bottom:
+    - <script defer src="/js/lotso_scroll.js"></script>

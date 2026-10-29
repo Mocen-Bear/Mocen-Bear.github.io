@@ -1,5 +1,6 @@
 ---
 title: Mocen_Bear
+top_img: /img/banner_home.svg
 ---
 
 <span id="home-marker" hidden></span>
