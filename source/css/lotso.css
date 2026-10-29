@@ -149,3 +149,38 @@
   opacity: 0;
   pointer-events: none;
 }
+
+/* 6) 评论区门面：围栏 + 中文引导（默认英文界面太寡淡） */
+#post-comment .comment-head {
+  position: relative;
+}
+/* 「评论」标题右边的留言数徽章由 JS 注入；这里给评论区本体加个软围栏 */
+#post-comment .comment-wrap {
+  padding: 14px 12px 10px;
+  border: 2px dashed var(--hr-border, #a4d8fa);
+  border-radius: 12px;
+}
+/* 顶部横幅提示条（JS 注入，剪开后可见） */
+.cut-guide {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 6px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(249, 168, 212, 0.12), rgba(129, 200, 248, 0.14));
+  border: 1px solid rgba(128, 200, 248, 0.35);
+  font-size: 14px;
+  color: var(--font-color, #4c4948);
+  line-height: 1.6;
+}
+.cut-guide .cut-guide-icon {
+  flex: none;
+  width: 1.35em;
+  height: 1.35em;
+  border-radius: 50%;
+  background: url(/img/lotso.png) center/220% no-repeat;
+}
+.cut-guide b {
+  color: #d6446e;
+}

@@ -28,6 +28,13 @@
       hr.click()
     })
 
+    var guide = document.createElement('div')
+    guide.className = 'cut-guide'
+    guide.innerHTML =
+      '<span class="cut-guide-icon"></span>' +
+      '<span>这里是我的留言板：<b>点 Sign in with GitHub 用 GitHub 账号登录</b>，就能留下你的话，每条留言都永久保存不怕丢 🐻</span>'
+    pc.querySelector('.comment-wrap').parentNode.insertBefore(guide, pc.querySelector('.comment-wrap'))
+
     hr.addEventListener('click', function () {
       var open = hr.classList.toggle('cut-open')
       hint.classList.toggle('cut-hint-hide', open)
