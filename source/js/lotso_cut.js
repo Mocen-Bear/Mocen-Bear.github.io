@@ -2,6 +2,14 @@
 // 规则：不响应 hover（只认 click）；点一下剪刀滑到右端+虚线消失+评论区落下展开
 //      再点一下剪刀滑回左端+虚线复原+评论区收起
 ;(function () {
+  function place(hint, hr) {
+    var hrR = hr.getBoundingClientRect()
+    var anchor = hr.offsetParent || document.body
+    var pR = anchor.getBoundingClientRect()
+    hint.style.top = (hrR.top - pR.top - 40) + 'px'
+    hint.style.left = (hrR.left - pR.left + hrR.width * 0.05) + 'px'
+  }
+
   function init() {
     var pc = document.getElementById('post-comment')
     if (!pc) return
@@ -12,8 +20,24 @@
     if (hr.dataset.lotsoCut === '1') return
     hr.dataset.lotsoCut = '1'
     hr.setAttribute('title', '点我剪开评论区 ✂')
+
+    // 提示语：告诉访客剪刀是干嘛的；剪开后消失，收起时回来
+    var hint = document.createElement('div')
+    hint.className = 'cut-hint'
+    hint.textContent = '点击展开评论'
+    var anchor = hr.offsetParent || document.body
+    anchor.appendChild(hint)
+    place(hint, hr)
+    window.addEventListener('resize', function () {
+      place(hint, hr)
+    })
+    hint.addEventListener('click', function () {
+      hr.click()
+    })
+
     hr.addEventListener('click', function () {
       var open = hr.classList.toggle('cut-open')
+      hint.classList.toggle('cut-hint-hide', open)
       if (open) {
         pc.classList.add('cut-open')
         pc.style.maxHeight = pc.scrollHeight + 40 + 'px'
