@@ -3,16 +3,17 @@
 //      再点一下剪刀滑回左端+虚线复原+评论区收起
 ;(function () {
   function init() {
-    var hr = document.querySelector('hr.custom-hr')
-    if (!hr) return
     var pc = document.getElementById('post-comment')
     if (!pc) return
+    // 只认评论区头顶那把剪刀（紧邻 #post-comment 的 hr），避免误绑正文里的分割线
+    var prev = pc.previousElementSibling
+    var hr = prev && prev.tagName === 'HR' && prev.classList.contains('custom-hr') ? prev : document.querySelector('hr.custom-hr')
+    if (!hr) return
     if (hr.dataset.lotsoCut === '1') return
     hr.dataset.lotsoCut = '1'
-    hr.setAttribute('title', '点我剪开评论区')
+    hr.setAttribute('title', '点我剪开评论区 ✂')
     hr.addEventListener('click', function () {
       var open = hr.classList.toggle('cut-open')
-      hr.classList.add('cut-clicked')
       if (open) {
         pc.classList.add('cut-open')
         pc.style.maxHeight = pc.scrollHeight + 40 + 'px'
