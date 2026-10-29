@@ -87,16 +87,16 @@
   left: 5% !important;
 }
 
-/* 2) 只有评论区头顶那把剪刀可点可点（hr 紧邻 #post-comment 才算数） */
+/* 2) 壳内剪刀：可点、平时安静趴左端 5% */
 .custom-hr::before {
   transition: left 1s ease-in-out !important;
 }
-hr.custom-hr:has(+ #post-comment) {
+.cut-wrap .custom-hr {
   cursor: pointer;
 }
 
-/* 3) 剪断遮板：铺开时盖掉剪刀身后的虚线 */
-hr.custom-hr:has(+ #post-comment)::after {
+/* 3) 剪断遮板：点开后从左往右铺开，盖掉剪刀身后的虚线（卡片同色、深色模式自适应） */
+.cut-wrap .custom-hr::after {
   content: '';
   position: absolute;
   top: -3px;
@@ -107,10 +107,10 @@ hr.custom-hr:has(+ #post-comment)::after {
   transition: width 1s ease-in-out;
   pointer-events: none;
 }
-hr.custom-hr.cut-open::after {
+.cut-wrap .custom-hr.cut-open::after {
   width: calc(95% - 22px);
 }
-hr.custom-hr.cut-open::before {
+.cut-wrap .custom-hr.cut-open::before {
   left: calc(95% - 20px) !important;
 }
 
@@ -126,9 +126,16 @@ hr.custom-hr.cut-open::before {
   opacity: 0;
 }
 
-/* 5) 剪刀上方的常驻提示语：告诉访客这里能点开评论区；剪开后自动消失 */
+/* 5) 剪刀上方的常驻提示语：壳(.cut-wrap)就是坐标系，无需 JS 算位置 */
+.cut-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+}
 .cut-hint {
   position: absolute;
+  top: -38px;
+  left: 5%;
   z-index: 2;
   font-size: 13.5px;
   font-weight: 600;

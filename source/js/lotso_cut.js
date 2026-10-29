@@ -2,18 +2,10 @@
 // 规则：不响应 hover（只认 click）；点一下剪刀滑到右端+虚线消失+评论区落下展开
 //      再点一下剪刀滑回左端+虚线复原+评论区收起
 ;(function () {
-  function place(hint, hr) {
-    var hrR = hr.getBoundingClientRect()
-    var anchor = hr.offsetParent || document.body
-    var pR = anchor.getBoundingClientRect()
-    hint.style.top = (hrR.top - pR.top - 40) + 'px'
-    hint.style.left = (hrR.left - pR.left + hrR.width * 0.05) + 'px'
-  }
-
   function init() {
     var pc = document.getElementById('post-comment')
     if (!pc) return
-    // 只认评论区头顶那把剪刀（紧邻 #post-comment 的 hr），避免误绑正文里的分割线
+    // 找评论区头顶那把剪刀：先看紧邻的 hr，被包裹过（pjax 重入）就退回全局查
     var prev = pc.previousElementSibling
     var hr = prev && prev.tagName === 'HR' && prev.classList.contains('custom-hr') ? prev : document.querySelector('hr.custom-hr')
     if (!hr) return
@@ -21,16 +13,17 @@
     hr.dataset.lotsoCut = '1'
     hr.setAttribute('title', '点我剪开评论区 ✂')
 
-    // 提示语：告诉访客剪刀是干嘛的；剪开后消失，收起时回来
+    // 把 hr 包进一个自带定位的薄壳，提示语作为它的绝对定位子元素：
+    // 壳就是坐标系，宽度随文章列自适应 → 提示语永远钉在剪刀上方，不需要任何 JS 算坐标
+    var wrap = document.createElement('div')
+    wrap.className = 'cut-wrap'
+    hr.parentNode.insertBefore(wrap, hr)
+    wrap.appendChild(hr)
+
     var hint = document.createElement('div')
     hint.className = 'cut-hint'
     hint.textContent = '点击展开评论'
-    var anchor = hr.offsetParent || document.body
-    anchor.appendChild(hint)
-    place(hint, hr)
-    window.addEventListener('resize', function () {
-      place(hint, hr)
-    })
+    wrap.appendChild(hint)
     hint.addEventListener('click', function () {
       hr.click()
     })
