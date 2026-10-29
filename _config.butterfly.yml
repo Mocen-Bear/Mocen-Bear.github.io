@@ -81,7 +81,7 @@ CDN:
 comments:
   use: utterances
   text: true
-  lazyload: true
+  lazyload: false
 utterances:
   repo: Mocen-Bear/Mocen-Bear.github.io
   issue_term: pathname

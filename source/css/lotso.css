@@ -66,3 +66,9 @@
   margin-right: 0.3em;
   vertical-align: -0.18em;
 }
+
+/* 关掉主题自带的无限循环卖萌动画（公告喇叭抖动/右下角齿轮旋转），太晃眼 */
+.fa-shake,
+.fa-cog.fa-spin {
+  animation: none !important;
+}
