@@ -114,16 +114,22 @@
   left: calc(95% - 20px) !important;
 }
 
-/* 4) 评论区默认收起；剪开后展开（JS 会写入精确展开高度） */
+/* 4) 评论区默认收起；剪开后展开（JS 会写入精确展开高度）
+      快进: 动画 0.6s，减少"点了像没反应/卡细条"的困惑；iframe 保底高度防 utterances
+      未 boot 完时围栏瘪成一条细带 */
 #post-comment {
   overflow: hidden;
-  max-height: 1400px;
+  max-height: 1600px;
   opacity: 1;
-  transition: max-height 1.2s ease-in-out, opacity 0.8s ease;
+  transition: max-height 0.6s ease-in-out, opacity 0.45s ease;
 }
 #post-comment:not(.cut-open) {
   max-height: 0;
   opacity: 0;
+}
+#utterances-wrap .utterances,
+#utterances-wrap iframe {
+  min-height: 320px !important;
 }
 
 /* 5) 剪刀上方的常驻提示语：壳(.cut-wrap)就是坐标系，无需 JS 算位置 */
@@ -159,6 +165,7 @@
   padding: 14px 12px 10px;
   border: 2px dashed var(--hr-border, #a4d8fa);
   border-radius: 12px;
+  min-height: 330px;
 }
 /* 顶部横幅提示条（JS 注入，剪开后可见） */
 .cut-guide {
