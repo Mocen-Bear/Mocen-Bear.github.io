@@ -9,7 +9,7 @@ date: 2026-10-28 18:00:00
 
 ## 我在哪些地方
 
-- GitHub：（待补充）
+- GitHub：[Mocen-Bear](https://github.com/Mocen-Bear)
 
 ## 关于本站
 

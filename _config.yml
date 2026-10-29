@@ -1,4 +1,4 @@
-# Hexo 站点配置 —— Mocen_Bear 的博客
+﻿# Hexo 站点配置 —— Mocen_Bear 的博客
 # 网站标题
 title: Mocen_Bear
 subtitle: 记录学习、折腾与生活
@@ -8,7 +8,7 @@ language: zh-CN
 timezone: "Asia/Shanghai"
 
 # 线上地址（部署到 GitHub Pages 用户站后无需修改）
-url: http://localhost:4000/
+url: https://mocen-bear.github.io/
 permalink: posts/:title/
 
 # 文章流放在 /blog/（首页 / 是引导门面页）
