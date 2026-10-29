@@ -18,6 +18,29 @@
   }
 }
 
+/* 修复：入场动画期间（约1秒）整个 Banner 头部（含搜索按钮）在屏幕外 -35px，点搜索没反应
+   禁掉头部和 nav 的位移动画，只保留淡入 → 按钮从第 0ms 起就在可点击位置 */
+#page-header:not(.full_page),
+#nav.show {
+  animation: none;
+}
+
+/* 博客列表页（full_page）Banner 与「关于/归档」等页面统一：400px 高、普通定位 */
+#page-header.full_page {
+  background-attachment: scroll;
+}
+#page-header.full_page #site-info {
+  top: 200px;
+}
+@media (max-width: 768px) {
+  #page-header.full_page {
+    height: 280px;
+  }
+  #page-header.full_page #site-info {
+    top: 140px;
+  }
+}
+
 /* 门面页下拉箭头（JS 注入的 #scroll-down-lotso） */
 #scroll-down-lotso {
   position: absolute;

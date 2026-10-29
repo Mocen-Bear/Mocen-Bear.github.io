@@ -21,7 +21,7 @@ archive_img: /img/banner.svg
 favicon: /img/favicon.jpg
 
 # 首页 banner 高度（固定高比全屏构图更稳）
-index_top_img_height: 550px
+index_top_img_height: 400px
 
 # 主题色：保持 Butterfly 默认（蓝）—— 与粉紫蓝渐变 Banner 最搭
 
