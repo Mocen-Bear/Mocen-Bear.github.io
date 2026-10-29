@@ -128,7 +128,8 @@
   opacity: 0;
 }
 #utterances-wrap .utterances,
-#utterances-wrap iframe {
+#utterances-wrap iframe,
+#giscus-wrap iframe {
   min-height: 320px !important;
 }
 

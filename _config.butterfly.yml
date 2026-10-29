@@ -77,11 +77,22 @@ CDN:
   option:
     busuanzi: https://cn.vercount.one/js
 
-# 评论：Utterances（用 GitHub Issues 当留言板，留言者用 GitHub 账号登录）
+# 评论：Giscus（用 GitHub Discussions 当留言板，中文界面，读留言走 giscus 代理不经 GitHub 接口）
 comments:
-  use: utterances
+  use: Giscus
   text: true
   lazyload: false
+giscus:
+  repo: Mocen-Bear/Mocen-Bear.github.io
+  repo_id: R_kgDOVbUUIQ
+  category_id: DIC_kwDOVbUUIc4DJ5fW
+  light_theme: light
+  dark_theme: dark
+  option:
+    data-category: General
+    data-lang: zh-CN
+
+# 老评论系统（utterances）配置保留备查，已不启用
 utterances:
   repo: Mocen-Bear/Mocen-Bear.github.io
   issue_term: pathname
