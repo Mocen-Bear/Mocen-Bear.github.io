@@ -67,6 +67,12 @@ aside:
     enable: true
     content: 欢迎来到我的 blog
 
+# 计数器：不蒜子官方接口已失效（script 能下、计数 API 超时）
+# 改用 Vercount（兼容 busuanzi 网页标记的替代服务，国内可达）
+CDN:
+  option:
+    busuanzi: https://cn.vercount.one/js
+
 inject:
   head:
     - <link rel="stylesheet" href="/css/lotso.css">
