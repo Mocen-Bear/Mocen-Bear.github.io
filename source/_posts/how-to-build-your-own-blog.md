@@ -66,22 +66,7 @@ deploy:
 
 4. 执行 `hexo clean && hexo deploy`，等几分钟，访问你的网址 —— 「上线了，老板！」
 
-## 以后怎么写文章？
-
-就一个文件的事：在 `source/_posts` 文件夹里新建一个 `xxx.md`，开头写上标题和日期：
-
-```markdown
----
-title: 文章标题
-date: 2025-08-10 18:00:00
-tags:
-  - 随笔
----
-
-正文用 Markdown 想写啥写啥
-```
-
-保存后 `hexo server` 本地看看效果，满意就 `hexo clean && hexo deploy` 发布。完事。
+写完博客怎么发文章？那是「日常篇」的话题，看下一篇 → [手把手教你写文章并发布](/posts/how-to-write-and-publish-posts/)
 
 ## 踩坑预警（我都替你踩过了）
 
