@@ -6,8 +6,6 @@ tags:
   - GitHub
 ---
 
-前两篇我们搭好了博客、学会了发文（补课 → [从零开始搭一个自己的博客](/posts/how-to-build-your-own-blog/)、[如何写文章并在blog里发表](/posts/how-to-write-and-publish-posts/)）。但有个幕后大佬一直没介绍——**GitHub**。博客放在它家，留言板也用它的 Discussions，今天就把它讲明白。
-
 ## GitHub 是个啥
 
 一句话：**代码世界的网盘 + 社交网络**。把文件传上去，全世界都能看（如果你愿意），还有完整的「修改历史」帮你记着每一步。
