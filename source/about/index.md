@@ -13,6 +13,11 @@ comments: true
 ## 我在哪些地方
 
 - GitHub：[Mocen-Bear](https://github.com/Mocen-Bear)
+- 邮箱：
+  - [Mocen.Bear@gmail.com](mailto:Mocen.Bear@gmail.com)
+  - [luorch@outlook.com](mailto:luorch@outlook.com)
+  - [luorch2026@shanghaitech.edu.cn](mailto:luorch2026@shanghaitech.edu.cn)
+  - [3619721618@qq.com](mailto:3619721618@qq.com)
 
 ## 关于本站
 
